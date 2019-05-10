@@ -25,7 +25,7 @@ Import the project in intellij as a maven project.
 Once all the imports are done.
 Run MovieApplication.java
 Navigate to `http//:localhost:8080/swagger-ui.html` for swagger documentation of the services
-Navigate to `http://localhost:8080/h2-console` for the H2 in memory database.
+Navigate to `http://localhost:8080/h2-console` for the H2 in memory database console.
 
 ## Authors
 
