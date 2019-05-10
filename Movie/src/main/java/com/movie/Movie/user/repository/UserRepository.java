@@ -1,6 +1,6 @@
 package com.movie.Movie.user.repository;
 
-import com.movie.Movie.user.model.User;
+import com.movie.Movie.user.enitity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;

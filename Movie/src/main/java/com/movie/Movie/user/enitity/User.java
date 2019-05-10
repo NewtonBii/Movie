@@ -1,4 +1,4 @@
-package com.movie.Movie.user.model;
+package com.movie.Movie.user.enitity;
 
 import lombok.Data;
 

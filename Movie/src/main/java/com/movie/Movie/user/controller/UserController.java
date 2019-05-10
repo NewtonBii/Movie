@@ -2,7 +2,7 @@ package com.movie.Movie.user.controller;
 
 
 import com.movie.Movie.user.service.UserService;
-import com.movie.Movie.user.model.User;
+import com.movie.Movie.user.enitity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

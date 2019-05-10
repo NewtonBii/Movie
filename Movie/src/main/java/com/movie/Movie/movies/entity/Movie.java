@@ -1,4 +1,4 @@
-package com.movie.Movie.movies;
+package com.movie.Movie.movies.entity;
 
 
 import lombok.Data;

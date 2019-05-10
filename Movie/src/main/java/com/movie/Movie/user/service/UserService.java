@@ -1,7 +1,7 @@
 package com.movie.Movie.user.service;
 
 
-import com.movie.Movie.user.model.User;
+import com.movie.Movie.user.enitity.User;
 
 public interface UserService {
 
