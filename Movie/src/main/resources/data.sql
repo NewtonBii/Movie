@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  first_name VARCHAR(250) NOT NULL,
+  last_name VARCHAR(250) NOT NULL,
+  email VARCHAR(250) DEFAULT NULL
+);
+
+DROP TABLE IF EXISTS movie;
+
+CREATE TABLE movie(
+id INT AUTO_INCREMENT PRIMARY KEY,
+title VARCHAR (100),
+description VARCHAR (250),
+ recommendation  VARCHAR (250),
+ rating NUMBER ,
+ type VARCHAR (50)
+);
