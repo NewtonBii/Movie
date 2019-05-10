@@ -1,4 +1,4 @@
-package com.movie.Movie.user;
+package com.movie.Movie.user.model;
 
 import lombok.Data;
 
@@ -21,5 +21,8 @@ public class User {
 
     @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
+    private String password;
 }
 
