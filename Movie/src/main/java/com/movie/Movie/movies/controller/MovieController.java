@@ -39,7 +39,7 @@ Delete movie
     }
 
     @GetMapping(value = "filterMovies")
-    public List<Movie> filterMovies(@RequestParam(value = "watched", required = false) String watched) {
+    public List<Movie> filterMovies(@RequestParam("watched") final String watched) {
         try {
             List<Movie> movies = movieService.filterMoviesBy(watched);
             if (movies.isEmpty()) {
@@ -53,6 +53,8 @@ Delete movie
 
     }
 
+
+    @PostMapping(value = "editMovie")
     public ResponseEntity editMovie(@RequestBody() Movie movie) {
         try {
             movieService.editMovie(movie);
@@ -64,5 +66,18 @@ Delete movie
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
+
+    @DeleteMapping(value ="deleteMovie")
+    public ResponseEntity deleteMovie(@RequestBody() Movie movie){
+        try {
+            movieService.deleteMovie(movie);
+
+        }catch (Exception e){
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+
+        }
+
+        return new ResponseEntity(HttpStatus.ACCEPTED);
+    }
 
 }

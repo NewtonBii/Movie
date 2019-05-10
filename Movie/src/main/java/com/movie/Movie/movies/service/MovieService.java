@@ -10,4 +10,6 @@ public interface MovieService {
     List<Movie> filterMoviesBy(String filterBy);
 
     void editMovie(Movie movie);
+
+    void deleteMovie(Movie movie);
 }

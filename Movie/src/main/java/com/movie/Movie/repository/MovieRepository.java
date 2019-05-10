@@ -9,6 +9,10 @@ import java.util.List;
 
 public interface MovieRepository extends JpaRepository<Movie, BigDecimal> {
 
-    @Query(value = "SELECT * FROM movie WHERE watched = :watched OR watched = NULL", nativeQuery = true)
+    @Query(value = "SELECT * FROM movie WHERE watched = :watched UNION " +
+            "SELECT * FROM movie WHERE 'A' = :watched", nativeQuery = true)
      List<Movie> filterMoviesBy(String watched);
+
+    @Query(value = "SELECT * FROM movie WHERE ID = :id", nativeQuery = true)
+    Movie findById(Integer id);
 }

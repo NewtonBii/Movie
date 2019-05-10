@@ -26,8 +26,19 @@ public class MovieServiceImpl implements MovieService{
 
     @Override
     public void editMovie(Movie movie) {
+        Movie mov = movieRepository.findById(movie.getId());
+        mov.setDescription(movie.getDescription());
+        mov.setRating(movie.getRating());
+        mov.setTitle(movie.getTitle());
+        mov.setRecommendation(movie.getRecommendation());
+        mov.setType(movie.getType());
+        mov.setWatched(movie.getWatched());
 
-
+        movieRepository.save(mov);
     }
 
+    @Override
+    public void deleteMovie(Movie movie) {
+        movieRepository.delete(movie);
+    }
 }
