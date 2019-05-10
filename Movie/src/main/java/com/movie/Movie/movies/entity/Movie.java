@@ -30,6 +30,15 @@ public class Movie {
     @Column(name = "WATCHED")
     private  String watched;
 
+    public Movie(String title, String description, String recommendation, int rating, String type, String watched) {
+        this.title = title;
+        this.description = description;
+        this.recommendation = recommendation;
+        this.rating = rating;
+        this.type = type;
+        this.watched = watched;
+    }
+
     public int getId() {
         return id;
     }
