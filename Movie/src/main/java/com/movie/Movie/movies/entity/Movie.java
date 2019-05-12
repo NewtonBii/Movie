@@ -1,6 +1,7 @@
 package com.movie.Movie.movies.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import javax.persistence.*;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
     @Column(name = "TITLE")
@@ -28,16 +30,8 @@ public class Movie {
     private String type;
 
     @Column(name = "WATCHED")
-    private  String watched;
+    private String watched;
 
-    public Movie(String title, String description, String recommendation, int rating, String type, String watched) {
-        this.title = title;
-        this.description = description;
-        this.recommendation = recommendation;
-        this.rating = rating;
-        this.type = type;
-        this.watched = watched;
-    }
 
     public int getId() {
         return id;

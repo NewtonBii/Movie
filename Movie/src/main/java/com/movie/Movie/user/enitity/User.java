@@ -1,5 +1,6 @@
 package com.movie.Movie.user.enitity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int Id;
 
     @Column(name = "first_name")
@@ -23,13 +25,6 @@ public class User {
 
     @Column(name = "password")
     private String password;
-
-    public User(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-    }
 
     public int getId() {
         return Id;

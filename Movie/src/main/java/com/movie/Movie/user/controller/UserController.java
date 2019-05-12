@@ -16,11 +16,6 @@ public class UserController {
     UserService userService;
 
 
-     /*
-     * Create-user
-Login
-
-*/
 
     @PostMapping(value = "register")
      public ResponseEntity registerUser(@RequestBody() User user){

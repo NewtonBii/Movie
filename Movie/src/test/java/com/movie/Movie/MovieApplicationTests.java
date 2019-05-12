@@ -36,7 +36,7 @@ public class MovieApplicationTests {
     @Test
     public void whenFilterMovieByWatchedYes_thenReturnWatchedMovies() {
         //given
-        Movie newMovie = new Movie("TEST", "NEW MOVIE", "HIGHLY", 9, "MOVIE", "Y");
+        Movie newMovie = new Movie();
         entityManager.persist(newMovie);
         entityManager.flush();
 
@@ -53,7 +53,7 @@ public class MovieApplicationTests {
     @Test
     public void whenFilterMovieByWatchedNo_thenReturnWatchedMovies() {
         //given
-        Movie newMovie = new Movie("TEST", "NEW MOVIE", "HIGHLY", 9, "MOVIE", "N");
+        Movie newMovie = new Movie();
         entityManager.persist(newMovie);
         entityManager.flush();
 
@@ -74,7 +74,7 @@ public class MovieApplicationTests {
         int size = movieRepository.findAll().size();
 
         //when
-        Movie newMovie = new Movie("TEST", "NEW MOVIE", "HIGHLY", 9, "MOVIE", "N");
+        Movie newMovie = new Movie();
         entityManager.persist(newMovie);
         entityManager.flush();
 
@@ -93,7 +93,7 @@ public class MovieApplicationTests {
         int size = movieRepository.findAll().size();
 
         //when
-        Movie newMovie = new Movie("TEST", "NEW MOVIE", "HIGHLY", 9, "MOVIE", "N");
+        Movie newMovie = new Movie();
         entityManager.persist(newMovie);
         entityManager.flush();
 
@@ -112,7 +112,7 @@ public class MovieApplicationTests {
         int size = userRepository.findAll().size();
 
         //when
-        User newUser = new User("TESZT", "TESTS", "ntest@gmail.com", "ehjfvhjdfbfeawh");
+        User newUser = new User();
         entityManager.persist(newUser);
         entityManager.flush();
 
@@ -120,7 +120,6 @@ public class MovieApplicationTests {
 
         //then
         assert (size1 > size);
-
 
 
     }
